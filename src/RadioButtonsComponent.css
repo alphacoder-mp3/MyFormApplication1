@@ -1,0 +1,83 @@
+.card {
+  display: flex;
+  align-items: start;
+  width: 115%;
+  min-height: 80px; /* or any other value you prefer */
+}
+
+.card input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.card input[type="radio"]:checked {
+  border-color: #478bfb;
+}
+
+.card input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 6px;
+  border-radius: 50%;
+  background-color: #478bfb;
+}
+
+.card label {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 40px;
+  margin-bottom: 25px;
+}
+
+.card input[type="radio"]:checked + label {
+  border-color: #5a4fcf;
+}
+
+/* .card input[type="radio"]:checked + label h5 {
+  color: #5a4fcf;
+} */
+.avatar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555555;
+  margin-left: 15px;
+}
+.eclipse {
+  margin-left: 10px;
+  width: 20px;
+  height: 10px;
+  background-color: #555555;
+  border-radius: 0 0 10px 10px;
+  transform: rotate(180deg);
+}
+
+.card input[type="radio"]:checked + label .avatar,
+.card input[type="radio"]:checked + label .eclipse {
+  background-color: #5a4fcf;
+}
+
+.img-container {
+  margin-top: -30px;
+  /* margin-right: 100px; */
+  margin-right: 60px;
+  filter: grayscale(100%);
+}
+
+.card input[type="radio"]:checked + label .img-container {
+  background-color: white;
+  filter: grayscale(0%);
+}
