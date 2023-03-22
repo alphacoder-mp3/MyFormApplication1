@@ -62,8 +62,8 @@ const FormComponent = () => {
       return `${
         pageId === 1 ? "*Display name" : "*Workspace Url"
       } should not contain any whitespaces"`;
-    } else if (pageId === 1 && value.length <= 6) {
-      return "*Please enter at least 6 characters";
+    } else if (pageId === 1 && value.length <= 4) {
+      return "*Please enter at least 4 characters";
     } else {
       return "";
     }
