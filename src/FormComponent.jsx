@@ -41,7 +41,9 @@ const FormComponent = () => {
 
   const validateFirstPage = (value) => {
     if (/^\s/.test(value)) {
-      return "*Input value cannot have whitespace at the beginning";
+     return `${
+        pageId === 1 ? "*Full name" : "*Workspace Name"
+      } cannot have whitespace at the beginning`;
     } else if (!/^[a-zA-Z ]+$/.test(value)) {
       return "*Only alphabets are allowed";
     } else if (value.length <= 4) {
