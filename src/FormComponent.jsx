@@ -46,7 +46,7 @@ const FormComponent = () => {
       } cannot have whitespace at the beginning`;
     } else if (!/^[a-zA-Z ]+$/.test(value)) {
       return "*Only alphabets are allowed";
-    } else if (value.length <= 4) {
+    } else if (value.length < 4) {
       return "*Please enter at least 4 characters";
     } else {
       return "";
@@ -62,7 +62,7 @@ const FormComponent = () => {
       return `${
         pageId === 1 ? "*Display name" : "*Workspace Url"
       } should not contain any whitespaces"`;
-    } else if (pageId === 1 && value.length <= 4) {
+    } else if (pageId === 1 && value.length < 4) {
       return "*Please enter at least 4 characters";
     } else {
       return "";
