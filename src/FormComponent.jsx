@@ -24,9 +24,7 @@ const FormComponent = () => {
     const value = event.target.value;
     const error = validateFirstPage(value);
     setFirstInput({ ...firstInput, [event.target.name]: value });
-    pageId === 1
-      ? setValidationErrors({ ...validationErrors, fullName: error })
-      : setValidationErrors({ ...validationErrors, workSpaceName: error });
+    setValidationErrors({ ...validationErrors, [event.target.name]: error });
   };
 
   const handleSecondInputField = (event) => {
@@ -34,9 +32,7 @@ const FormComponent = () => {
     const value = event.target.value;
     const error = validateSecondPage(value);
     setSecondInput({ ...secondInput, [event.target.name]: value });
-    pageId === 1
-      ? setValidationErrors({ ...validationErrors, displayName: error })
-      : setValidationErrors({ ...validationErrors, workSpaceUrl: error });
+    setValidationErrors({ ...validationErrors, [event.target.name]: error });
   };
 
   const validateFirstPage = (value) => {
